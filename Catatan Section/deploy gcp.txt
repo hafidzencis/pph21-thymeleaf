@@ -1,0 +1,78 @@
+Deploy use GCP
+
+Tgl 14-15 April 2022
+
+==> VM Instances
+-> use linux distro with base RPM/Red Hat
+
+==> Create SSH
+https://souvikhaldar.medium.com/how-to-add-the-public-ssh-key-to-a-gcp-virtual-machine-ef5703e8e596
+https://phoenixnap.com/kb/generate-ssh-key-windows-10
+
+-> File SSH Pub dan SSH private
+C:\Users\Hafidz\.ssh
+- .Pub File -> public
+- .File -> private
+
+letak file
+
+C:\Users\Hafidz\.ssh
+==> Install Docker dan dijadikan rootless
+running docker rootless
+sudo yum install docker
+sudo groupadd docker
+echo $USER 
+sudo usermod -aG docker $USER
+sudo systemctl start docker
+sudo systemctl enable docker.service
+sudo systemctl enable containerd.service
+exit
+Login again
+
+==> Add Postgres
+
+docker run --name postgres -p 5432:5432 -e POSTGRES_USER=user -e POSTGRES_PASSWORD=password -e POSTGRES_DB=db_name -d postgres 
+docker exec -it postgres bash
+cek db if connected url
+
+==> Add network
+docker network create <nama_network>
+docker network connect <nama_network> <container>
+docker network inspect <nama_network>
+
+==> Add secrets key in github
+Setting -> Action secrets -> new Secret
+- DockerHub_Username -> username docker
+- DockerHub_Token -> generate token in docker
+- SSH_USER -> username at instance
+- SSH_Private_key -> private key ssh
+- SSH_Host -> ip public instance
+
+==> Add Dockerfile in local
+# Import base JDK from Linux
+FROM adoptopenjdk/openjdk11:alpine
+
+# Set work directory
+WORKDIR /app
+
+# Copy application files
+COPY target/*.jar app.jar
+
+# Expose PORT
+EXPOSE 8080
+
+# Run application
+ENTRYPOINT ["java", "-jar", "app.jar"]
+save Dockerfile
+
+==> Add dev.env in local
+spring.datasource.url=jdbc:postgresql://postgres:5432/dbname
+spring.datasource.driverClassName=org.postgresql.Driver
+spring.datasource.username=user
+spring.datasource.password=password
+
+
+
+b8b4a906-fbaa-4d96-8808-bcedd647ef44
+
+

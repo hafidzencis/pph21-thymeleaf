@@ -1,0 +1,7 @@
+ADMIN
+- Total User -> banyaknya use SQL -> count where isAdmin : false
+- Online User -> ?, cara cek nya gimana?
+- Online Discussion -> ?, maksudnya gimana?
+- Thread Static -> masih bingung?
+- Total trending -> using sql order by?
+- Notice Broad

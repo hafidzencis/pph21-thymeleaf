@@ -1,0 +1,23 @@
+API(aplication programming inteface)
+adalah sekumpulan fungsi dan prosedur yang mengizinkan kita untuk mengakses sebuah fitur atau data terhadap sistem informasi, aplikasi atau sebuah service.
+API banyak jenisnnya
+cara kerja api ini adalah client meminta suatu data kepada server lalu server meresponse dengan mengirim data tersebut.
+
+REST Api
+Respresentasional State Transfer ini menggunakan HTTP request method yaitu;
+- GET
+- POST
+- PUT
+- DELETE
+- HEAD
+- OPTION
+- PATCH
+
+Request & Response format :
+- JSON
+- XML
+- SOAP
+
+d3138b16501746f991081ccde88f344a
+
+

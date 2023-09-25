@@ -1,0 +1,8 @@
+deployment postgret gk conek antar apk
+check lastest code
+cek docker log
+
+
+
+pake resttemplate
+desain uiux -> icon detail , form username dan password

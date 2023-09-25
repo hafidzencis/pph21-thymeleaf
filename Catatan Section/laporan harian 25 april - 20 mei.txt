@@ -1,0 +1,44 @@
+Tanggal 25 April 2022,di siang hari, saya membuat rancangan mini project yang berjudul API Lahan Kubur,rancangan ini berisi mengenai erd
+teknologi yang digunakan pada project dan minimum viable product.Lalu, di malam hari, dilanjutkan
+dengan zoom meeting presentasi tentang rancangan mini project
+
+Tanggal 26 April 2022,di sore hari, saya membuat ulang rancangan mini project yang berjudul API Sistem Pendaftaran
+Klub Sepak Bola bagi Anak Kecil, rancangan ini berisi Minimum Viable Product,ERD,dan teknologi yang dipakai.Lalu, di malam hari,
+dilanjutkan dengan teman - teman kelas dan saya presentasi mengenerai rancangan mini project
+
+Tanggal 27 April 2022,di sore hari, saya membuat 1 entity dan 1 repository pada mini project,Lalu,
+di malam hari, dilanjutkan dengan zoom meeting mengenai presentasi progress pengerjaan dan kendala.
+
+Tanggal 28 April 2022,saya tidak mengerjakan apa apa dan tidak mengikuti zoom meeting.
+
+Tanggal 29 April 2022,di sore hari, saya memngerjakan 2 service, 1 repository dan entity pada mini project.Lalu, di malam hari,
+dilanjutkan dengan zoom meeting  mengenai presentasi progress pengerjaan dan kendala.
+
+
+Tanggal 9 Mei 2022,di pagi hari,saya mengerjakan beberapa service, entity dan repository pada mini project.Lalu,
+dilanjutkan dengan zoom meeting mengenai presentasi progress pengerjaan dan kendala.
+
+Tanggal 10 Mei 2022,di malam hari,saya melakukan fixing service, namun tetap saja masih errorr
+
+Tanggal 11 Mei 2022,di siang hari,saya mengerjakan unit test.Lalu, dilanjutkan mengenai zoom meeting 
+mengenau presentasi progress pengerjaan dan kendala.
+
+Tanggal 12 Mei 2022,di siang hari,saya melakukan fixing service, mengerjakan unit testing.
+
+Tanggal 13 Mei 2022,di siang hari,saya mengerjakan pencarian berdasarkan service tertentu dan zoom meetingnya
+diganti pada tanggal 14 Mei 2022 jam 9 pagi
+
+
+Tanggal 17 Mei 2022,di siang hari,saya mengerjakan JWT, lalu dilanjutkan zoom meeting presentasi mini project pada malam hari.
+Tanggal 18 Mei 2022, di siang hari,saya mengerjakan unit testing, lalu, pada malam hari, zoom meeting 
+presentasi mini project
+Tanggal 19 Mei 2022,disiang hari, saya mengerjakan git workflow.
+Tanggal 20 Mei 2022,disiang hari, saya mengerjakan deployment using AWS, Github Action,lalu dilanjutkan malam
+hari, presentasi mini project
+
+
+
+
+
+
+

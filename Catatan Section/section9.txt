@@ -1,0 +1,51 @@
+Problem Solving Paradigm adalah bagaimana menyelesaikan masalah dengan prinsip 
+yang sering digunakan seperti Algoritma Brute Force,Algoritma Greedy, Algoritma
+Divide and Conquer dan terakhir Dynamic Programming.
+
+Algoritma Brute Force
+Algoritma ini atau disebut algoritma complete searh.Definisi dari algoritma ini adalah melakukan
+pengecekan semua data.
+Algoritma ini cocok digunakan untuk time complexity yang tidak lebih cepat dari O(n).
+Contoh dari penggunaan algoritma brute force adalah pencarian min dan max pada suatu 
+array.
+
+Algoritma Divide & Conquer
+ALgoritma yang membagi masalah yang besar menjadi masalah lebih kecil.
+Ketika masalah kecil sudah diselesaikan langsung diselesaikan,setelah itu, menggabungkan solusi masalah yang 
+kecil menjadi solusi untuk masalah yang lebih besar.Contoh penggunaan dari algoritma ini adalah
+binary search.Algoritma ini menggunakan time complexity O(log n).
+
+Algoritma Greedy
+Algoritma yang fokus mencari nilai yang lokal optimal
+
+
+
+Assalamu'alaikum Pak, mohon maaf menganggu waktunya
+Perkenalkan nama saya Muhammad Hafidz dengan NIM L200190056 mahasiswa informatika yang mengambil mata kuliah Machine Learning A. Bersamaan dengan surat ini, saya izin untuk tidak mengikuti perkuliahan Machine Learning 1 semester. Untuk penilaian, mohon pak dimas berkenan untuk melakukan konversi dari hasil program MBKM yang saya ikuti
+terimakasih atas waktunya, Wassalamualaikum wr wb
+
+Assalamu'alaikum Pak, mohon maaf menganggu waktunya
+Perkenalkan nama saya Muhammad Hafidz dengan NIM L200190056 mahasiswa informatika yang mengambil mata kuliah Sistem Informasi Terdistribusi . Bersamaan dengan surat ini, saya izin untuk tidak mengikuti perkuliahan Sistem Informasi Terdistribusi 1 semester. Untuk penilaian, mohon pak helmi berkenan untuk melakukan konversi dari hasil program MBKM yang saya ikuti
+terimakasih atas waktunya, Wassalamualaikum wr wb
+
+Assalamu'alaikum Pak, mohon maaf menganggu waktunya
+Perkenalkan nama saya Muhammad Hafidz dengan NIM L200190056 mahasiswa informatika yang mengambil mata kuliah Pemrograman Sistem Embededd . Bersamaan dengan surat ini, saya izin untuk tidak mengikuti perkuliahan Pemrograman Sistem Embededd 1 semester. Untuk penilaian, mohon pak bana berkenan untuk melakukan konversi dari hasil program MBKM yang saya ikuti
+terimakasih atas waktunya, Wassalamualaikum wr wb
+
+
+Assalamu'alaikum Pak, mohon maaf menganggu waktunya
+Perkenalkan nama saya Muhammad Hafidz dengan NIM L200190056 mahasiswa informatika yang mengambil mata kuliah Praktikum Pemrograman Sistem Embededd . Bersamaan dengan surat ini, saya izin untuk tidak mengikuti perkuliahan Praktikum Pemrograman Sistem Embededd 1 semester. Untuk penilaian, mohon pak bana berkenan untuk melakukan konversi dari hasil program MBKM yang saya ikuti
+terimakasih atas waktunya, Wassalamualaikum wr wb
+
+
+Assalamu'alaikum Bu, mohon maaf menganggu waktunya
+Perkenalkan nama Muhammad Hafidz dengan NIM L200190056 mahasiswa informatika yang mengambil mata kuliah Pemograman Perangkat Mobile A. Bersamaan dengan surat ini, saya izin untuk tidak mengikuti perkuliahan Pemograman Perangkat Mobile 1 semester. Untuk penilaian, mohon Bu Devi berkenan untuk melakukan konversi dari hasil program MBKM yang saya ikuti
+terimakasih atas waktunya, Wassalamualaikum wr wb
+
+Assalamu'alaikum Bu, mohon maaf menganggu waktunya
+Perkenalkan nama Muhammad Hafidz dengan NIM L200190056 mahasiswa informatika yang mengambil mata kuliah Animasi Komputer A. Bersamaan dengan surat ini, saya izin untuk tidak mengikuti perkuliahan Animasi Komputer 1 semester. Untuk penilaian, mohon Bu Devi berkenan untuk melakukan konversi dari hasil program MBKM yang saya ikuti
+terimakasih atas waktunya, Wassalamualaikum wr wb
+
+Assalamu'alaikum Bu, mohon maaf menganggu waktunya
+Perkenalkan nama Muhammad Hafidz dengan NIM L200190056 mahasiswa informatika yang mengambil mata kuliah Biometrika. Bersamaan dengan surat ini, saya izin untuk tidak mengikuti perkuliahan Biometrika 1 semester. Untuk penilaian, mohon Bu Diah berkenan untuk melakukan konversi dari hasil program MBKM yang saya ikuti
+terimakasih atas waktunya, Wassalamualaikum wr wb

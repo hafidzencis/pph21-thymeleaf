@@ -1,0 +1,31 @@
+Senin, 4 April 2022, saya mempelajari Section 30 yaitu Logging. Logging digunakan  untuk mencatat method- method yang sedang berjalan supaya gampang melacak mana saja yang ada bagian error.Setelah itu dilanjutkan dengan zoom meeting technical skill yaitu  Logging.
+
+Selasa, 5 April 2022, saya mempelajari section 31 yaitu Spring Boot Actuator. Materi ini membahas memonitoring performance pada java spring boot.Setelah itu, dilanjutkan dengan zoom meeting technical skill yaitu spring boot actuator.
+
+Rabu, 6 April 2022, saya mempelajari Section 36 yaitu GraphQL with Spring Boot.GraphQL adalah single endpoint dimana di berada di server.GraphQL ini membutuhkan schema untuk jalan.Kalau REST API, terdapat endpoint, GET, POST, PUT,DELETE.Nah, untuk GraphQL , ada Query dimana, seperti endpoint GET pada REST API dan Mutation seperti POST pada REST API, lalu dilanjutkan pada zoom meeting technikal skill pada GraphQL.
+
+Kamis, 7 April 2022, saya mengerjakan materi tentang GraphQL, lalu dilanjutkan dengan technical skill pembahasan materi graphQL
+
+Jumat, 8 April 2022, saya mempelajari materi section 37  yaitu  docker, Docker adalah aplikasi yang digunakan untuk menyatukan software file dan pendukungnya ke dalam suatu wadah(lingkungan) agar memudahkan suatu proses pengembangan software. Lalu, mengikuti zoom meeting technical skill docker
+
+Senin, 11 April 2022, saya mempelajari materi Compute Service.Compute Service merupakan bagian dari cloud.Setelah itu, saya mengikuti zoom meeting technical skill pembahasan mengenai penggunaan aws untuk ci/cd.
+
+Selasa, 12 April 2022, saya masih mempelajari Compute Service.Setelah itu, mengikuti zoom meeting technical skill tentang penggunaan cloud server pada AWS.
+
+Rabu, 13 April 2022, saya tidak belajar apapun karena pendaftaran AWS saya belum diterima oleh Amazon.Jadi Pada hari saya hanya mengikuti technical zoom meeting tentang penggunaan Google Cloud Platform untuk CICD.
+
+Kamis, 14 April 2022, saya mempelajari mengenai penggunaan Google Cloud Platform untuk Deployment suatu project,Seletah mempelajari, saya mengikuti zoom meeting technical mengenai sharing - sharing apabila terkendala melakukan deployment di AWS atau GCP
+
+Jumat, 15 April 2022, saya melanjutkan deployment dengan GCP juga menggunakan Github Action,Setelah itu, dilanjutkan dengan zoom meeting technical skill tentang deployment lewat Github Action
+
+Senin, 18 Apr 2022, saya mempelajari introduction microservices.Setelah itu mengikuti zoom meeting dengan pembahasan introduction microservices.
+
+Selasa, 19 Apr 2022, saya mempelajari Implementation Microservices,Setelah itu dilanjutkan zoom meeting pembahasan mengenai implementation microservices
+
+Rabu, 20 Apr 2022 , saya mempelajari Implementation Microservices, Setelah itu di lanjutkan dengan zoom meeting tehnical skill yaitu sharing - sharing kesusahan ketika mengerjakaan implemantation microservices dan introduction kafka
+
+Kamis, 21 Apr 2022, saya tidak mempelajari apapun hanya mengikuti zoom meeting technical skill mengenai implementation penggunaan cicd coverage
+
+Jumat, 22 Apr 2022,saya mempelajari CICD dengan coverage lalu mengikuti zoom meeting technical skill dengan pembahasan sharing - sharing mengenai kesusahan dalam pengerjaan CICD dengan coverage dan pembahsaan Mini Project
+
+

@@ -1,0 +1,8 @@
+->cross origin apabila error--> solusi cross origin
+
+Container postgrees jadi 2 karena 
+
+postgresql-dev -> 5433:5432
+postgresql-sit -> 5432:5432
+
+1 postgresql -> 5432:5432 -> user QA, FE,

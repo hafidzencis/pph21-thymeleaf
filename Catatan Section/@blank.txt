@@ -1,0 +1,9 @@
+java x validation
+jackson validator
+
+java validation springg boiot
+java x validation constraint
+
+field email di buat uniq di buat indexing di db
+
+anotasi 

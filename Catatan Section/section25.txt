@@ -1,0 +1,58 @@
+=====> SQL Advance Aggregation
+
+--> Like 
+-query untuk mencari value
+cth : Select * from products prds where prds.product_name Like %n%
+
+---> Limit dan Offset
+- Limit = query untuk melakukan membatasi data
+- Offset = query untuk memulai awalan data
+cth : Select * from products prds where prds.product_name limit 5 offset 0
+
+---> AVG 
+- query untuk mencari rata - rata
+
+---> SUM
+- query untuk melakukan total jumlah data
+
+---> MIN
+- query untuk mencari data minimum
+
+---> Max 
+- query untuk mencari data maximum
+
+---> Group By
+- query untuk melakukan penentuan kelompok
+
+---> Order By
+- query unuk mengurutkan data
+
+
+=====> SQL Advance JOIN
+
+---> SQL INNER JOIN
+- query untuk menggabungkan kedua tabel dengan syarat ada keduan id yang sama.
+
+---> SQL LEFT JOIN
+- query untuk mengambil semua data yang ada di tabel sebelah kiri dari perintah LEFT JOIN, dan akan mencoba menggabungkannya dengan tabel kanan. Jika tidak ada pasangannya, nilai dari table kiri tetap ada dan nilai yang tidak ada di tabel kanan akan menjadi NULL.
+
+---> SQL RIGHT JOIN
+- query untuk  mengambil semua data yang ada di tabel sebelah kanan dari perintah RIGHT JOIN. Perintah ini akan mencoba menggabungkannya dengan tabel yang ada di sebalah kiri. Jika tidak ada pasangannya, nilai dari table kanan tetap ada dan nilai yang tidak ada di tabel kiri akan menjadi NULL.
+
+---> SQL FULL JOIN
+- FULL OUTER JOIN akan mengambil semua data dari kedua tabel. Perintah ini akan mencoba menggabungkan kedua data sesuai dengan syarat. Jika tidak ada pasangannya, nilai akan dijadikan NULL.
+
+
+=====> Database Relationship
+
+---> One to One
+- One to One adalah relasi yang mana setiap satu baris data pada tabel pertama hanya berhubungan dengan satu baris pada tabel kedua.
+
+---> One to Many
+- One to Many adalah relasi yang mana setiap satu baris data pada tabel pertama berhubungan dengan lebih dari satu baris pada tabel kedua. 
+
+---> Many to Many
+- Many to Many adalah relasi yang mana setiap lebih dari satu baris data dari tabel pertama berhubungan dengan lebih dari satu baris data pada tabel kedua. Artinya, kedua tabel masing-masing dapat mengakses banyak data dari tabel yang direlasikan
+
+
+

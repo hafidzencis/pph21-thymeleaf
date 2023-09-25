@@ -1,0 +1,79 @@
+=========SYSTEM DESIGN============
+
+====>System Design Diagram adalah simbol yang memrepresentasikan suatu informasi
+
+->Macam - macam System Design Diagram :
+- Flowchart
+- Use Case ()
+- ERD (Entity Relations Diagram)
+- HLA (High Level Architecture)
+
+====>System Design Distributed adalah Sistem yang menggunakan multi server atau komputer.Biasanya Sistem ini sudah mencapai transaksi data cukup tinggi.
+
+->Karakteristik System Design Distributed
+
+- Scalability
+terdapat 2 macan scalability
+
+-> Vertical Scaling
+Increase Ability, example = transaction 20 data/second to 30 data/second
+Increase ability take long time because refactor code, analysis code make algorithm efficiency and add ssd or ram
+-> Horizontal Scaling
+Duplicate, example = transction 10 data/second to 30 data/second & 30 data/second
+Duplicate, take short time because buy new server
+
+- Reliability(kehandalan)
+Reliability membahas multiple server apabila salah satu server terkena masalah masih ada server yang mengatasi untuk melakukan transaksi data'
+
+- Availability(Ketersediaan)
+Availability membahas bagaimana multiple server harus bekerja 24 jam
+
+- Efficiency
+Efficiency membahas distributed item with low time, minimum 2 second
+
+- Serviceability & Manageability
+Serviceability & Manageability ini membahas penggunaan clean code dan melakukan maintain pada code
+
+====System Design Job Queue & Microservices
+
+->Job Queue
+Job Queue bertugas untuk melakukan manajemen tugas dari user ke suatu tujuann user 
+
+->Load Balancing 
+Load balancing adalah suatu tindakan untuk mengurangi kesenjagan dalam pembagian data server,misalkan terdapat dua server data, ketika ingin melakukan 
+transaksi data, yang terjadi satu data server tersebut terjadi penumpukan data sehingga satu data tersebut bisa mengurangin penayimpanan data, bisa menyebabkan
+data server tersebut lelet padahal satu data server yang lain nya masih ada, Maka terbentuk lah LOAD BALANCER, dimana 2 data server tersebut digunakan
+semua maksudnya 2 data semua  ketika ada transaksi maka ada 2 load balancer yang menuju ke 2 data server agar tidak terjadi penumpukan data pada salah satu
+data server
+
+-> Monolithic
+Monolithic adalah  arsitektur dimana keseluruhan kode akan dikompilasi menjadi satu aplikasi (biasanya menjadi satu binary atau artifact) 
+dimana aplikasi tersebut menjalankan seluruh proses yang dibutuhkan.
+
+-> Microservices
+Microservices adalah model service yang berada di sekililing domain bisnis dimana dia berkomunikasi sebagai arsitektur dengan pilihan banyak opsi layanan
+server.Microservice arsitektur ini terdapat banyak pilihan kolaborasi microservices
+
+====>System Design SQL & NoSQL
+
+-> SQL
+SQL mempunyai skema yang harus dibuat terlebih dahulu, properti yang harus didefine terlebih dahulu.SQL ini mempunyai banyak tools.
+SQL ini mempunyai prinsip ACID:
+- Atomicity : transaksi terjadi semua atau tidak sama sekali. Contoh : apabila mempunyai sistem data pembayaran dan checkout apabila sistem
+data pembayaran tidak menyimpan data maka sistem checkout tidak menyimpan juga
+- Consistency : struktur dan penentuan tipe data sudah di tentukan sejak awal
+- Isolation : apabila terjadi request bersamaan maka akan di eksekusi secara berurutan
+- Durability : data itu akan tersimpan terus apabila di tampilan ui user sudah terhapus
+
+-> No SQL
+No SQL mempunyai skema less,kompleksitas cukup rendah, menghindari ACID, flexsibel dalam penggunaan data.
+No SQL tidak cocok untuk data transaksi dan finance
+
+====>System Design Caching & Indexing 
+
+-> Cache
+Cache adalah data penyimpanan sementera dan apabila terdapat request yang sama dari data sebelumnya maka mengembalikannya seperti data sebelumnya.
+Cache ini mempunyai tempat penyimpanan di RAM 
+
+-> Indexing
+Indexing adalah teknik struktur data yang memungkinkan Anda dengan cepat mengambil catatan dari file database. Indeks adalah tabel kecil yang hanya memiliki dua kolom.

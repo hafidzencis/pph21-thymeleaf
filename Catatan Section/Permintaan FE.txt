@@ -1,0 +1,17 @@
+Unit Test penting karena meminimalisir kegagalan dalam code
+
+
+jwt custom forbidden spring boot
+
+
+bikin data true false ketika ngehit like dan dislike
+
+Ansible auto build docker in 
+
+FE minta buatin 
+
+fitur Topic
+fitur Thread 
+fitur aploud
+
+

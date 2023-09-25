@@ -1,0 +1,49 @@
+========COMMAND LINE INTERFACE========
+
+Command Line Interface ini mempunyai kecepatan, sangat kuat, text based interface developers use effectively and efficiently berkomunikasi dengan komputer
+
+Kelebihan CLI
+- Kontrolnya sangat detail dalam OS atau aplikasi
+- Dapat melakukan proses yang cepat
+- Mampu menyimpan scripts untuk melakukan automasi regular tasks
+- Dapat membantu ketika melakukan troubleshooting
+
+Macam - macam Command :
+- pwd(position working directory) = check posisi yang sedang kita lakukan
+- ls = check isi folder
+- mkdir = membuat direktori
+- cd(change directory) = pindah direktori
+- rm(remove) = untuk hapus
+- cp(copy) = copy
+- mv(move) = untuk berpindah
+- ln(link) = untuk melinkkan
+
+Command khusus untuk files:
+- create -> touch
+- view -> head,cat,tail,less
+- editor -> vim, nano
+- permission -> chwon,chmod
+- different -> diff
+
+Command khusus untuk network:
+- ping
+- ssh
+- netstat
+- nmap
+- ip addr (ipconfig)
+- wget
+- curl
+- telnet
+- netcat
+
+Command khusus untuk utility :
+- man
+- env
+- echo
+- date
+- which
+- watch
+- sudo
+- history
+- grep
+- locate

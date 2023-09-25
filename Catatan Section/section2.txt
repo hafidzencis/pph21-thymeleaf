@@ -1,0 +1,53 @@
+VCS (version control sytem) ini digunakan untuk melakukan kontrol file system supaya dapat melihat 
+file awal dibuat sampai file yg terakhir dibuat.Salah satu version control system populer yang digunakan para developer untuk
+mengembangkan software secara bersamaan adalah GIT
+
+git remote add origin <link github> digunakan untuk sebagai jalan awal suatu branch
+git add . digunakan untuk menandai semua file ke staging area
+git add commit -m <pesan disampaikan> digunakan untuk memberi pesan pada dari staging area ke repository.File tersebut sudah siap untuk sinkronisasi ke repository
+git push origin master digunakan untuk menyinkronisasi  file yang sudah siap ke dalam repository
+
+git status untuk melihat ada di branch mana dan apakah file tersebut sudah di staging area
+
+git diff untuk melihat perubahan (syntaks ini bisa digunakan ketika masih di working direktori)
+git stash untuk meyimpan file awal sementara
+git stash apply untuk mengembalikan file awal sementara taditadi 
+
+git push origin master digunakan untk menyinkronisasi  file yang sudah siap ke dalam repository
+
+.gitignore supaya file file tertentu tidak masuk ke dalam repository
+git log untuk melihat perbedaan commit yg lainnya secara komplit(diperlihatkan tgl,jam serta author )
+git log --oneline untuk melihat id semua commit 
+
+git reset digunakan untuk pengembalian titik tertentu pada branch tertentu juga-> --soft dan --hard
+git reset noid --hard/--soft
+git reset idcommit --soft
+
+git pull untuk mengambil commit terbaru lalu otomatis menggabungkan (merge) dengan branch yang aktif.
+git fetch origin untuk mengambil commit saja. Perintah git fetch tidak akan langsung melakukan merge.
+2744
+
+git branch //namma // utk menambah branch
+git branch utk mengecek branch
+git branch -d //nama// utk menghapus branch
+git branch -a untuk melihat semua branch secara details
+
+git checkout -b //nama// utk menambah branch tersebut dan berpindah ke branch tersebut
+git checkout //nama// utk berpindah branch
+
+git merge
+-> git fast forward = merge secabang dengan main
+git merge --ff //nama//
+nb: harus berada di origin main/master terlebih dahulu 
+
+-> git no fast forward = merge tidak secabang digunakan agar gampang pembacaan
+git merge --no-ff //nama//
+nb: harus berada di origin main/master terlebih dahulu 
+
+->pull request yaitu meminta merge dari sub branch x ke branch master
+pull request ini memastikan agar untuk si lead eng(memegang branch master) untuk code review terlebih dahulu
+
+->3 poin
+1. Versioning control system adalah tools yang mencatat setiap perubahan terhadap sebuah file.Salah satu tools yang digunakan untuk mencatat versi ini adalah GITHUB
+
+Machine Learning, Pemrograman Perangkat Mobile, Pemrograman Sistem Embedded, Praktikum Pemrograman Sistem Embedded, Biometrika, Sistem Informasi Terdistribusi, Animasi Komputer

@@ -1,0 +1,13 @@
+html, body {
+    min-height: 110%;
+}
+
+.navbar-index{
+    background-color: rgb(34, 34, 158);
+
+    .navbar-brand{
+        color: rgb(255, 255, 255);
+        font-size: 24px;
+        font-family: 'Courier New', Courier, monospace;
+    }
+}

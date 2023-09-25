@@ -1,0 +1,30 @@
+FINAL PROJECT
+
+1. Use Github Workflow
+Implementation Branchin -> implemenatasikan penggunaan master,development,fitur a dan fitur b
+Tidak boleh langsung di push di branch master, artinya harus sesuai prosedur
+kaya unit testing, unit integration , postmann di branch development
+untuk branch fitur untuk menambah kan fitur
+
+2. Create Design SYSTEM
+
+pembuatan erd
+
+atau kalau bisa penggunaan API Documentation
+
+
+3. Penggunaan Clean Architecture
+
+4. CRUD menggunakan db postgreesql pakai JpARepository
+
+5. Penggunaan AUTH JWT, untuk penggunaann logging ke mongodb menjadi poin ++
+
+6. Unit Testing melakukan code coverage harus lebih dari 50%
+
+7. CI/CD secara monolith membuat repository baru
+
+8. Deployment Ke CLOUD Provider menggunakan docker dan aws
+
+9. Penggunaan OPEN API Min 1 sebagai poin plus
+
+10.

@@ -1,0 +1,168 @@
+========contorl===========
+package com.example.section22.controller;
+import java.util.Optional;
+import java.util.Locale.Category;
+
+import javax.persistence.Entity;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("/v1/posts")
+public class CategoriesController {
+    @Autowired
+    private CategoryRepository categoryRepository;
+
+    @GetMapping("/categories")
+    public List<Category> getAllCategorie(){
+        return categoryRepository.findAll();
+    }
+
+    @GetMapping("/categories/{id}")
+    public Optional<Category> getDetailCategory(@PathVariable Long id){
+        return categoryRepository.findById(id);
+    }
+
+    @PostMapping("/category")
+    public Category createNewCategory(@RequestBody Category payload){
+        return categoryRepository.save(payload);
+    }
+    
+    @PutMapping("/categories/{id}")
+    public Optional<Category> updateCategory(@PathVariable Long id,
+    @RequestBody Category category){
+        Optional<Category> categoryById = categoryRepository.findById(Id);
+
+        categoryById.ifPresent(res -> {
+            res.setName(category.getName());
+            res.setDescription(category.getDescription());
+            
+            categoryRepository.save(res);
+
+
+        });
+
+        return categoryById;
+    }
+
+    @DeleteMapping("/categories/{id}")
+    public void deleteCategory(@PathVariable Long Id){
+        Optional<Category> categoryById = categoryRepository.findById(Id);
+
+        categoryById.ifPresent(res -> {     
+            categoryRepository.delete(res);
+
+
+        });
+    }
+}
+
+
+==========================================
+package com.example.section22.entity;
+
+import javax.annotation.Generated;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "categories")
+
+public class Category {
+    @Id
+    //auto increment
+    @GeneratedValue(strategy = GenerationType.IDENTITY) 
+    private Long id;
+
+    //menambah column
+
+    @Column(name = "name")
+    private String name;
+
+    @Column(name = "description")
+    private String description;
+
+    public Long gedId(){
+        return id;
+    }
+
+    public void setId(Long id){
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+}
+
+======================================================
+
+/**
+ * CategoryRepository
+ */
+
+package com.example.section22.repository;
+
+import java.util.Locale.Category;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+
+@Repository
+public interface CategoryRepository extends JpaRepository<Category, Long> {
+
+    
+}
+
+================================================
+
+spring.datasource.url=jdbc:h2:mem:testdb
+spring.datasource.driverClassName=org.h2.Driver
+spring.datasource.username=sa
+spring.datasource.password=
+
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.dialect=org.hibarnate.dialect.H2Dialect
+spring.jpa.hibarnate.ddl-auto= update
+
+spring.h2.console.enabled=true
+#default path: h2-console
+spring.h2.console.path=/h2-ui
+
+
+Ringkasan:
+
+PagingAndSortingRepository memperluas CrudRepository
+
+JpaRepository memperluas PagingAndSortingRepository
+
+Antarmuka CrudRepository menyediakan metode untuk operasi CRUD, sehingga memungkinkan Anda untuk membuat, membaca, memperbarui, dan menghapus catatan tanpa harus menentukan metode Anda sendiri.
+
+PagingAndSortingRepository menyediakan metode tambahan untuk mengambil entitas menggunakan pagination dan pengurutan.
+
+Akhirnya JpaRepository menambahkan beberapa fungsionalitas lagi yang khusus untuk JPA.

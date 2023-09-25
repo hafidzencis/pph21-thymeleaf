@@ -1,0 +1,108 @@
+-> Imeplement soft delete di semua table 
+-> Tabel Role, dihilangkan , diganti pakai is_Admin Boolean
+-> Tabel Report Thread, tipe data report_type diganti enum
+-> Tabel Report Comment, tipe data report_type diganti enum
+-> Table Thread, kolom simpan tipe data boolean
+
+
+//diabaikan
+-> Tabel Thread, status report mengimplementasi soft delete
+-> Tabel User, implemnt soft delete, kolom is_suspended
+
+//yang ingin ditanyakan pd 1 juni 2022
+masih bingung fitur share pada table thread -> implement copylink
+masih binggung fitur save/follow -> 
+
+ENTiT
+
+fitur
+crone -> scheduler 
+
+fitur gambar
+base64 -> simpan dattabase, ketika diselect * akan ngeleg karena varchar dengan gambbar untuk 5mb,
+apaibla data banyak akan errorr
+gambar url -> s3 bucket di aws 
+https://www.baeldung.com/aws-s3-java
+
+Design API 
+
+REST API
+
+endpoint : 
+
+=>Role USER
+==> profile
+get: v1/user
+put: v1/user/profile -> nama,addres,telephone number
+
+==> Thread 
+create: v1/thread
+get: v1/thread
+delete: v1/thread/id
+
+search: v1/titlethread
+search: v1/thread
+
+==> Comment
+create: v1/comment
+get: v1/comment
+delete: v1/comment
+
+==> Topic
+get: v1/topic
+
+==> Like Thread
+create : v1/likethread
+get: v1/likethread
+
+==> Like comment
+create: v1/likecomment
+get: v1/likecomment
+
+==> Report Thread
+create: v1/reportthread
+
+==> Report Comment
+create: v1/reportcomment
+
+==> Following
+create: v1/following
+get: v1/following
+
+==> Follow Thread
+create: v1/followthread
+get: v1/followthread
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Entity = DAO -> JpA REpositoruy -> Database
+DTO -> Response 
+
+colom x
+colom y
+
+
+
+
+
+
+
+
+
+
+
+
+
+

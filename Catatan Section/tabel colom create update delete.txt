@@ -1,0 +1,11 @@
+semua tabel bisa di created at
+M_USERS -> -
+M_FOLLOWING -> -
+M_TOPIC -> update delete
+M_THREAD -> delete 
+M_LIKE_THREAD -> delete
+M_REPORT_THREAD -> -
+M_COMMENT -> delete
+M_LIKE_COMMENT -> delete
+M_REPORT_COMMENT -> -
+M_SAVE_THREAD -> delete

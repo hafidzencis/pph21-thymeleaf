@@ -1,0 +1,186 @@
+Deploy ke AWS Mini Project
+Tgl 13 April 2022
+
+##CLI 
+==> Use virtual machine
+Linux Distro(RPM/Debian/SUSE/Arch): 
+-->update 'yum update' -> red hat
+-->update 'apt update' -> debian
+
+==> Architecture
+-> 64xARM -> mirip M1
+-> 64xBIT -> Intel/ AMD
+
+==> Pasangan Kunci
+Tipe : RSA
+Format : .pem
+
+==> Konfigurasi IP:
+Port : 22 Tipe SSH -> untuk mengakses instance
+Port : 80 Tipe Http-> untuk mengakses url tanpa memakai suffix  misalkan 52.334.55/api/user -> tanpa menambah suffix
+Port : 8080 Tipe TCP -> untuk mengakes url harus memakai suffix :8000 misalkan 52.334.55:8000/api/user -> menambah suffix :8000
+Port : 5432 Tipe Postgresql-> default dari postgres
+
+Set Sumber Info : ANYWHERE karena bisa akses url ke mana saja
+
+==> Login use putty
+-> use IP Public
+-> use Private key --> load private-key.pem -> save
+
+==>Pattern to instance with terminal
+ssh -i aws-edu-ec2.pem ec2-user@52.87.182.94
+ssh -i <private_key> <user>@<ip/hostname
+
+###GET IN OS 
+==> update -> sudo yum update
+
+==> running docker rootless
+sudo yum install docker
+sudo groupadd docker
+echo $USER 
+sudo usermod -aG docker $USER
+sudo systemctl start docker
+sudo systemctl enable docker.service
+sudo systemctl enable containerd.service
+exit
+Login again
+
+==> Run Spring boot using ip public
+=> docker run --name hello -p 80:8080 -d piinalpin/springboot-helloworld
+- breakdown
+-> --name hello = create container with name hello
+-> -p 80:8080 = publish with 80 -> http from instance, 8080 -> spring boot
+-> -d piinalpin/springboot-helloworld = detach pull from piinalpin/springboot-helloworld
+=> docker logs -f hello -> running spring boot
+
+
+
+==> Add Postgress
+dock
+docker exec -it postgres bash
+cek db
+
+==> Add Postgres
+
+docker run --name postgres -p 5432:5432 -e POSTGRES_USER=user -e POSTGRES_PASSWORD=password -e POSTGRES_DB=db_name -d postgres 
+docker exec -it postgres bash
+cek db if connected url
+
+==> Add network
+docker network create <nama_network>
+docker network connect <nama_network> <container>
+docker network inspect <nama_network>
+
+==> Add secrets key in github
+Setting -> Action secrets -> new Secret
+- DockerHub_Username -> username docker
+- DockerHub_Token -> generate token in docker
+- SSH_USER -> username at instance
+- SSH_Private_key -> private key ssh
+- SSH_Host -> ip public instance
+
+==> Add Dockerfile in local
+# Import base JDK from Linux
+FROM adoptopenjdk/openjdk11:alpine
+
+# Set work directory
+WORKDIR /app
+
+# Copy application files
+COPY target/*.jar app.jar
+
+# Expose PORT
+EXPOSE 8080
+
+# Run application
+ENTRYPOINT ["java", "-jar", "app.jar"]
+save Dockerfile
+
+==> Add dev.env in local
+spring.datasource.url=jdbc:postgresql://postgres:5432/db_name
+spring.datasource.driverClassName=org.postgresql.Driver
+spring.datasource.username=user
+spring.datasource.password=password
+
+
+=>how create docker images (case spring boot with result .jar)
+- must in directory  intellij
+- in case (docker build -t fgd .)
+docker build -t <name_image> .
+
+
+
+=> HOW TO RUN docker CONTAINER POSTGRESQL
+docker exec -it <container_name> psql -d <postgrel_db_name> -U <postgresql_username>
+
+=> How to stop docker container
+docker stop <name_container>
+
+=> How to remove docker container
+docker rm <name_container>
+
+=> how to check docker container running
+docker ps -a
+
+=> COMPILER docker CONTAINER 
+docker logs -f <container>
+
+
+
+=> Step to remove docker network
+- docker network disconnect <name_network> <container>
+- docker network rm <name_network>
+
+
+docker stop develop
+            docker rm develop
+            docker rmi hafidzencis/develop:latest
+            docker pull hafidzencis/develop:latest
+            docker run -d --name capstone -p 443:8080 -p 80:8080 --env-file dev.env --network mynetwork -v "/home/ec2-user/images":/app/image/image hafidzencis/develop:latest
+
+persiste
+D:/ANIME/FILES/D:/ANIME/FILES/2163768882 (2).jpg
+docker run --name [CONTAINER_NAME] -p [HOST_PORT]:[CONTAINER_PORT] -v "[HOST_DIR]":[CONTAINER_DIR] -d [IMAGE_NAME]
+
+##bisa
+docker run --name fgdrun -p 8080:8080 -v `D:\ANIME\FILES\belajarcolume\image`:/app/image/image --env-file local.env -d fgd
+
+//bisa
+docker run --name fgdrun -p 8080:8080 -v `D:\ANIME\FILES\belajarcolume\imagecok`:/app/forimage/forimage --env-file local.env -d fgd
+
+
+docker run --name fgdrun -p 8080:8080 -v `D:\ANIME\FILES\belajarcolume\image`:/app/ --env-file local.env -d fgd
+docker run --name fgdrun -p 8080:8080 -v `D:\ANIME\FILES\belajarcolume\imagecok`:/app/forimage --env-file local.env -d fgd
+
+34.125.26.208
+
+C:\Users\Hafidz\.ssh
+
+https://www.callicoder.com/hibernate-spring-boot-jpa-one-to-many-mapping-example/
+
+
+44.206.244.111:8000/index.html
+
+
+SELECT 
+	
+(
+
+)
+DELETE FROM m_save_thread;
+DELETE FROM m_report_thread;
+DELETE FROM m_report_user;
+DELETE FROM m_report_comment;
+DELETE FROM m_like_comment;
+DELETE FROM m_like_thread;
+DELETE FROM m_comment;
+DELETE FROM m_thread;
+DELETE FROM m_topic;
+DELETE FROM m_following;
+DELETE FROM m_user;
+
+
+
+
+
+

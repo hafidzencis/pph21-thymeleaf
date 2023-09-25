@@ -1,0 +1,29 @@
+Arsitektur Monolith 
+- Singel Deployment
+- Fitur tersebut ditaruh di aplikasi yang sama sehingga aplikasi tersebut menjadi besar
+
+Kelebihan Arsitektur Monolith
+- Mudah di Develop
+- Mudah di Deploy
+- Mudah di Test
+- Mudah di Scale
+
+Kekurangan Arsitektur Monolith
+- Menyulitkan developer yang baru bergabung
+- Development skala besar dengan banyak developer agak  menyulitkan
+- Running di Aplikasi Monolith
+
+Arsitektur Microservices
+- Aplikasi-aplikasi kecil yang saling bekerja sama
+- Bisa fokus karena mengerjakan  satu pekerjaan
+- Dapat di deploy dan diubah tanpa tergantung aplikasi lain
+
+Kelebihan Arsitektur Microservices
+- Mudah dimengerti karena ukuran service relatif kecil
+- Lebih Mudah mudah di develop, dimantain
+- Dapat diganti bahasa pemrograman
+
+Kekurangn Arsitektur Microservice
+- Distributed System ini bisa menjadi kelebihan atau kekurangan
+- Rawan terjadi error antar service
+- Sulit melakukan testing service  karena perbedaan bahasa pemrograman

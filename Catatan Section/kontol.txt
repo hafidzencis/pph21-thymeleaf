@@ -1,0 +1,71 @@
+SELECT is_like,count() FROM m_thread t INNER JOIN m_likethread lt ON t.id = lt.thread_id GROUP BY is_like ORDER BY count(id) DESC
+
+SELECT t.*,count(lt.*) AS is_like 
+FROM m_thread t 
+FULL OUTER JOIN m_likethread lt 
+ON t.id = lt.thread_id 
+GROUP BY (lt.is_like) ORDER BY COUNT(lt.*) DESC 
+
+SELECT COUNT(is_like) AS LIKE,thread_id FROM m_likethread WHERE is_like = true GROUP BY is_like,thread_id 
+
+SELECT thread_id, count(*) FROM m_likethread GROUP BY is_like ORDER BY COUNT(*) DESC
+
+id: 64
+{
+    "email":"jokowitigaperiode@gmail.com",
+    "password": "Jokowi3periode"
+}
+
+
+id: 63
+{
+	"email":"jokowithreeperiode@gmail.com",
+	"password":"Jokowi3periode"
+}
+
+
+
+
+
+{"name":"PAPAPAP","email":"jokowitigaperiode@gmail.com","password":"Jokowi3periode"}
+
+{"name":"PAPAPAP","email":"jokowithreeperiode@gmail.com","password":"Jokowi3periode"}
+
+
+
+SELECT COUNT(is_like) AS LIKE,thread_id FROM m_likethread WHERE is_like = true GROUP BY is_like,thread_id 
+
+
+
+{
+    "email":"jokowi3periode@gmail.com",
+    "password": "Jokowi3periode"
+}
+
+
+{"name":"AdminINI","email":"admin12345@gmail.com","password": "Admin12345","is_admin":true}
+
+
+// buat suspended bisa false bisa true
+
+
+
+
+
+
+
+
+
+
+
+
+
+akun yg belum di fixing lob stream dengan udah di ku fixing lob stream -> ketemu
+
+
+
+
+
+
+
+

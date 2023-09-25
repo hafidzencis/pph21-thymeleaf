@@ -1,0 +1,14 @@
+Remedial
+
+1. Section(6&7) Collection  / Remidi Praktikum  (sudah)
+2. Section(11) OOP #2  / Remidi Praktikum (sudah)
+3. Section(12) Database Schema, DDL / Remidi Praktikum  (sudah)
+4. Section(13) Join, Agregasi dll / Remidi Praktikum  (sudah)
+5. Section(17) No SQL 2  / Remidi Praktikum  (sudah)
+6. Section(19) CLI   / Remidi Summary,  Praktikum (sudah)
+7. Section(28) Unit Testing / Remidi Pilihan Ganda, Praktikum  (sudah)
+8. Section(29) Unit Integration / Remidi Summary,  Praktikum (sudah)
+9. Section(37) Docker / Remidi Summary, Praktikum  (sudah)
+
+
+

@@ -1,0 +1,54 @@
+  @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+//    @Id
+    @ManyToOne
+    @JoinColumn(name = "child_id",nullable = false)
+    private ChildDao childs;
+
+//    @Id
+    @ManyToOne
+    @JoinColumn(name = "team_id",nullable = false)
+    private TeamDao teams;
+
+
+untuk pubg butuh 2 advance room
+
+16 -> AB
+16 -> CD
+
+pertama 2 
+
+16 -> AB
+16 -> CD
+
+kedua 2
+
+akhir 1 
+
+disuruh mas	tegar untuk sewa 
+
+
+pinjamm room
+minta parnertship pan, kita itu tanya dulu ke penjual terus ngajak partnership bisa di komunikasikan ke sponsorhip
+beli langsung paketan, biar dapet murah
+
+layout streaming dicek kembali di note rapat besar pj, e sports
+
+
+minta org - org chatan org org e, kesiapa misalnya dekdor butuh barang ke dwiki opo liane git
+
+
+Bingun
+Bracket pada pubg itu babak kualifikasi itu 1 bracket berapa tim  dan 
+itu kan kek nya 1 hari 2 bracke yg dimana bracket 1 tim A dan tim B dan bracket 2 tim C tim D itu langsung ditanding ke bareng
+
+Kendala
+-ESPORTSS
+-- room advance ml pubg 
+-- setting layout tanya ke dekdok
+
+-BAKSOS
+--kendala beras uang nggotongi barang
+--timbangan
+

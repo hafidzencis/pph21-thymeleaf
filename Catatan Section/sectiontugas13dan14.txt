@@ -1,0 +1,261 @@
+create table product_types (
+	idtypeprod INT(11) auto_increment primary key,
+	name varchar(255),
+	created_at  DATETIME DEFAULT  CURRENT_TIMESTAMP,
+	updated_at  DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+
+);
+
+create table operator (
+	idop INT(11) auto_increment primary key,
+	name varchar(255),
+	created_at  DATETIME DEFAULT  CURRENT_TIMESTAMP,
+	updated_at  DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+
+);
+
+
+create table product (
+	idproduct INT(11) auto_increment primary key,
+	kodename varchar(100),
+	name varchar(255),
+	status varchar(50),
+	idop INT(11) references operator(idop) on delete cascade on update cascade,
+	idtypeprod INT(11)  references product_types(idtypeprod) on delete cascade on update cascade,
+	created_at  DATETIME DEFAULT  CURRENT_TIMESTAMP,
+	updated_at  DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+	
+);
+
+create table transaction_details(
+	idproduct INT(11)  auto_increment references product(idproduct) on delete cascade on update cascade,
+	transaction_id INT(11) auto_increment references transaction(transaction_id) on delete cascade on update cascade
+
+
+);
+
+create table product_description(
+	iddescprod INT(11) NOT NULL auto_increment primary key,
+	description TEXT,
+	created_at  DATETIME DEFAULT  CURRENT_TIMESTAMP,
+	updated_at  DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+
+create table transaction(
+	transaction_id INT(11) NOT NULL auto_increment primary key,
+	status Varchar(50),
+	total_kuantiti INT(50),
+	total_price INT(15),
+	created_at  DATETIME DEFAULT  CURRENT_TIMESTAMP,
+	updated_at  DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+	id_user INT(11) references users(id_user) on delete cascade on update cascade,
+	paymethod INT(11)references payments_method(paymethod) on delete cascade on update cascade
+	
+);
+
+create table payments_method(
+	paymethod INT(11)  auto_increment primary key,
+	nama varchar(255),
+	cardnumber INT(20),
+	created_at  DATETIME DEFAULT  CURRENT_TIMESTAMP,
+	updated_at  DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+
+	
+
+);
+
+
+
+create table users(
+	id_user INT(11) NOT NULL auto_increment primary key,
+	nama varchar(255),
+	alamat varchar(255),
+	tgllahir date,
+	gender varchar(255),
+	status_user varchar(255),
+	created_at  DATETIME DEFAULT  CURRENT_TIMESTAMP,
+	updated_at  DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+
+create table kurir(
+	id INT(11)  auto_increment primary key,
+	nama varchar(255),
+	created_at  DATETIME DEFAULT  CURRENT_TIMESTAMP,
+	updated_at  DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+
+	
+
+);
+
+create table payment_method_desc(
+	payment_method_id int primary key not null,
+	description text,
+	foreign key (payment_method_id) references payments_method(paymethod)
+
+
+);
+
+create table alamat(
+	alamat_id int primary key not null,
+	alamat_lengkap text,
+	foreign key (alamat_id) references users(id_user)
+);
+
+create table transaction_details(
+	idprod int(11) not null,
+	idtransaction int(11) not null,
+	foreign key (idprod) references product(idproduct),
+	foreign key (idtransaction) references transaction(transaction_id),
+	unique (idprod,idtransaction)
+
+);
+
+create table user_payment_method_detail(
+	user_id int key not null,
+	payment_method_id  int not null ,
+	foreign key (user_id) references users(id_user),
+	foreign key (payment_method_id) references payments_method(paymethod)
+	
+
+);
+
+=========refactor database=========
+
+create table product_types(
+	id int primary key not null auto increment,
+	name varchar(255)not null,
+	created_at datetime DEFAULT CURRENT_TIMESTAMP,
+	updated_at datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+create table operators(
+	id int primary key not null auto increment,
+	name varchar(255) not null,
+	created_at datetime DEFAULT CURRENT_TIMESTAMP,
+	updated_at datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+create table products (
+	id int primary key not null auto increment, 
+	code varchar(50) not null,
+	name varchar(100) not null,
+	status smallint not null,
+	created_at datetime DEFAULT CURRENT_TIMESTAMP,
+	updated_at datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+	product_type_id int foreign key references product_types(id),
+	operator_id int foreign key references operators(id)	
+);
+
+create table descriptions(
+	id int primary ket not null auto increment,
+	description text not null,
+	created_at datetime DEFAULT CURRENT_TIMESTAMP,
+	updated_at datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+	products_id unique foreign key references products(id)
+
+);
+
+create table transaction_details(
+	transaction_id int primary key,
+	product_id int primary key,
+	
+	status varchar(10) not null;
+	qty int(11) not null,
+	price numeric(25,2),
+	created_at datetime DEFAULT CURRENT_TIMESTAMP,
+	updated_at datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+	foreign key (transaction_id) references transactions(transaction_id),
+	foreign key (product_id) references products(product_id)
+	unique(transaction_id,product_id)
+	
+
+);
+
+create table transactions(
+	id int primary key not null auto increment,
+	status varchar(10) not null,
+	total_qty int not null,
+	total_price numeric(25,2) not null,
+	created_at datetime DEFAULT CURRENT_TIMESTAMP,
+	updated_at datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+	user_id int foreign key references users(id),
+	payment_methods_id int foreign key references payment_methods(id)
+
+);
+
+
+create table payment_methods(
+	id int primary key not null auto increment,
+	name varchar(255) not null,
+	status smallint not null,
+	created_at datetime DEFAULT CURRENT_TIMESTAMP,
+	updated_at datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+
+);
+
+create table users(
+	id int primary key not null auto increment,
+	status smallint not null,
+	dob date not null,
+	gender char(1) not null,
+	created_at datetime DEFAULT CURRENT_TIMESTAMP,
+	updated_at datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+	
+);
+
+SECTION 14
+	
+1. 
+
+a.INSERT INTO operator(idop,name,created_at,updated_at) VALUES (,"Indosat",,)
+
+b.INSERT INTO product_types(idtypeprod,name,created_at,update_at) VALUES(1,"paket kuota internet",now(),now()),(2,"pulsa",now(),now()),(3,"paket telepon dan sms",now(),now())
+
+c.INSERT INTO product(idproduct,kodename,name,status,idop,idtypeprod,created_at,updated_at) VALUES
+(1,"tri50gb","paket kuota internet tri 50gb","Tersedia",3,1,now(),now()),
+(2,"tri10gb","paket kuota internet tri 10gb","Tersedia",3,1,now(),now());
+
+d.INSERT INTO product(idproduct,kodename,name,status,idop,idtypeprod,created_at,updated_at) VALUES 
+(3,"plsindo50.000","pulsa indosat 50.000","Tersedia",1,2,now(),now()),
+(4,"plsindo10.000","pulsa indosat 10.000","Tersedia",1,2,now(),now()),
+(5,"plsindo20.000","pulsa indosat 20.000","Tersedia",1,2,now(),now());
+
+e.INSERT INTO product(idproduct,kodename,name,status,idop,idtypeprod,created_at,updated_at) VALUES 
+(6,"tlp&sms50.000","paket telepon 1/hari jam dan 300 sms XL","Tersedia",4,3,now(),now()),
+(7,"tlp&sms10.000","paket telepon 5/hari jam dan 500 sms XL","Tersedia",4,3,now(),now()),
+(8,"tlp&sms20.000","paket telepon 3/hari jam dan 100 sms XL","Tersedia",4,3,now(),now());
+
+f.INSERT INTO product_description(iddescprod,description,created_at,updated_at) VALUES
+(1,"paketan paling awet di tri",now(),now()),
+(2,"paketan paling murah di tri",now(),now()),
+(3,"pulsa paling mahal di indosat",now(),now()),
+(4,"pulsa paling murah di indosat",now(),now()),
+(5,"pulsa murah di indosat",now(),now()),
+(6,"telepon dan sms paling mahal di xl",now(),now()),
+(7,"telepon dan sms paling murah di xl",now(),now()),
+(8,"telepon dan sms murah di xl",now(),now());
+
+1,g.INSERT INTO payments_method(paymethod,nama,cardnumber,created_at,updated_at)VALUES
+(1, "Bank",212,now(),now()),
+(2, "E- Money",696,now(),now()),
+(3, "Kartu Kredit",484,now(),now());
+
+h.INSERT INTO users(id_user,nama,alamat,tgllahir,gender,status_user,created_at,updated_at) VALUES
+(2,"Megawati","Jakarta Pusat","23-1-1947","Perempuan","Gold",now(),now()),
+(3, "Puan Maharani","Jakarta Pusat","6-9-1973","Perempuan","Silver",now(),now()),
+(4, "Maaruf Amin","Tangerang","11-3-1943","Laki-laki","Gold",now(),now()),
+(5, "Luhut Panjaitan","Medan","28-09-1947","Laki-laki","Platinum",now(),now());
+(1,"Jokowi","Surakarta","21-6-1961","Laki-laki","Gold",now(),now())
+
+i.INSERT INTO transaction(transaction_id,status,total_kuantiti,total_price,created_at,updated_at,id_user,paymethod) VALUES
+(1,"Barang Sudah Sampai",2,50000,now(),now(),2,2),
+(2,"Barang sedang di packing",3,60000,now(),now(),1,2),
+(3,"Barang di perjalanan",4,70000,now(),now(),3,1);
+
+j.INSERT INTO transaction_details(idprod,idtransaction) VALUES 
+(1,1),
+(2,2),
+(3,3);
+

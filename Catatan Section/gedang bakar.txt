@@ -1,0 +1,178 @@
+SELECT is_like,count() FROM m_thread t INNER JOIN m_likethread lt ON t.id = lt.thread_id GROUP BY is_like ORDER BY count(id) DESC
+
+SELECT t.*,count(lt.*) AS is_like 
+FROM m_thread t 
+FULL OUTER JOIN m_likethread lt 
+ON t.id = lt.thread_id 
+GROUP BY (lt.is_like) ORDER BY COUNT(lt.*) DESC 
+
+SELECT COUNT(is_like) AS LIKE,thread_id FROM m_likethread WHERE is_like = true GROUP BY is_like,thread_id 
+
+SELECT thread_id, count(*) FROM m_likethread GROUP BY is_like ORDER BY COUNT(*) DESC
+
+id: 64
+{
+    "email":"jokowitigaperiode@gmail.com",
+    "password": "Jokowi3periode"
+}
+
+
+id: 63
+{
+	"email":"jokowithreeperiode@gmail.com",
+	"password":"Jokowi3periode"
+}
+
+
+
+
+
+{"name":"jokowitigaperiode","email":"jokowitigaperiode@gmail.com","password":"Jokowi3periode"}
+
+"email":"jokowitigaperiode@gmail.com","password":"Jokowi3periode"
+
+{"name":"jokowithreeperiode","email":"jokowithreeperiode@gmail.com","password":"Jokowi3periode"}
+"email":"jokowithreeperiode@gmail.com","password":"Jokowi3periode"
+
+
+{"name":"ihsangtg123","email":"ihsangtg123@gmail.com","password":"Ihsangtg123"}
+"email":"ihsangtg123@gmail.com",
+"password":"Ihsangtg99"
+
+
+{"name":"Admin12345","email":"admin12345@gmail.com","password": "Admin12345","is_admin":true}
+"email":"admin12345@gmail.com",
+"password":"Admin12345"
+
+SELECT us.id,
+(
+select count(*)
+from m_following f
+where f.user_follow_id = us.id
+)
+FROM m_user us
+
+//BENER CARI URUTKAN FOLLOWER BERDASARKAN FOLLOWER
+select f.user_follow_id as id, count(f.user_follow_id) as follower, us.name_user,us.ausername
+from m_following f 
+join m_user us on us.id = f.user_follow_id
+where f.is_follow = true
+group by f.user_follow_id, us.name_user,us.ausername
+order by count(f.user_follow_id) desc
+
+//CARI FOLLOWING DIURUTKAN DARI ID
+select f.user_id as id, count(f.user_id)AS following, us.name_user,us.ausername
+from m_following f 
+join m_user us on us.id = f.user_id
+where f.is_follow = true
+group by f.user_id,us.name_user,us.ausername
+order by (f.user_id)
+
+//count thread
+select count(*) AS count_thread FROM m_thread;
+
+SELECT us.id,us.name_user,
+(
+select count(f.user_follow_id)
+from m_following f
+where f.user_follow_id = us.id AND f.is_follow = true	
+)AS FOLLLOWERS,
+(
+select count(f.user_id)
+from m_following f
+where f.user_id = us.id AND f.is_follow = true
+)AS FOLLOWING
+FROM m_user us 
+
+
+
+SELECT COUNT(f.user_follow_id)AS Followers, COUNT(f.user_id),us.name_user
+FROM m_following f
+JOIN m_user us
+ON f.user_id = us.id
+WHERE f.is_follow = TRUE
+GROUP BY(f.user_follow_id,f.user_id,us.name_user) ORDER BY COUNT(f.user_follow_id)DESC
+
+{"name":"BismillahINI","email":"bismillah12345@gmail.com","password": "Bismillah12345","is_admin":true}
+
+
+
+"email":"bismillah12345@gmail.com",
+"password": "Bismillah12345"
+
+
+"email":"ihsangtg@gmail.com",
+"password":"Ihsangtg99"
+
+"email":"admin12345@gmail.com",
+"password":"Admin12345"
+
+"email":"ihsangtg123@gmail.com",
+"password":"Ihsangtg99"
+
+"email":"ihsangtg99@gmail.com",
+"password":"Ihsangtg99"
+
+
+
+Create thread :  udah
+Share Thread : udah
+Komen Thread : udah
+Like Thread : udah
+Report Thread : udah
+Report comment : udah
+Filter Thread : udah
+Search Thread : udah
+List Thread berdasarkan Linke : sudah
+List User berdasarkan followers : sudah
+Menghapus Thread di Admin : udah
+Follow Fitur : udah
+Report User : udah
+Susspend Use: udah
+
+akun yg belum di fixing lob stream dengan udah di ku fixing lob stream -> ketemu
+
+
+// select semua report thread_user_report
+select sum(AllCount) AS Total_Count
+ from
+(
+(select count(*) AS AllCount from m_report_thread)
+ union all
+(select count(*) AS AllCount from m_report_comment)
+union all
+(select count(*) AS AllCount from m_report_user)
+)t;
+
+// select thread where user id = 
+SELECT count(*) FROM m_thread WHERE user_id = 1
+
+// like thread dan thread id
+SELECT count(is_like) AS Like,thread_id FROM
+m_like_thread WHERE is_like = true
+GROUP BY thread_id
+
+// dislike thread dan thread id
+SELECT count(is_dislike) AS Dislike,thread_id FROM
+m_like_thread WHERE is_dislike = true
+GROUP BY thread_id
+
+// count comment 
+SELECT count(comment) AS total_comment,thread_id,user_id FROM m_comment
+GROUP BY thread_id,user_id
+
+total jumlah thread nya user
+total dari like pada sebuah thread
+total dari dislike pada sebuha thread
+total report pada sebuah thread 
+
+
+
+
+today trending
+
+https://zoom.us/rec/play/fRJaoVdzpPG_4Aa1P3ioi4wvSom8EUcPRQUsMSPR1mPA6ivlmOcMflokEgv8VBNsaxvR4xIjigQJb-3m.nUfzYyUqUdedR1sQ?continueMode=true&_x_zm_rtaid=3gRzSXJ-QUqck6YTNdfOBw.1657562064942.71221589f4e271c5364d69c0a9ea0fe0&_x_zm_rhtaid=604
+
+
+
+{"name":"WildanGans",}

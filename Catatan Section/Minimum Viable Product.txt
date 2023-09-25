@@ -1,0 +1,9 @@
+MVP Minimum Viable Product
+JWT
+JWT use Role
+User Can Create User,Read User By Id Update User,Create Child,Update Child,Search Child, Search Team, Search Choose Team
+Admin Can CRUD USER,CRUD Team,CRUD Child, CRUD Coach, CRUD Schedule
+Search Team By Name
+Search Child By Name
+Search Choose Team By Child Name
+CRUD USER,TEAM,CHILD,COACH,SCHEDULE,TEAM

@@ -1,0 +1,22 @@
+Recursion adalah function ketika memanggil diri sendiri.Dengan masalah ringan dapat menyelesaikan masalah dengan cepat.
+Dengan masalah yang besar dapat membagi - membagi solusi tersebut ke bagian lebih kecil.
+Kenapa butuh recursion?
+Rekursi ini dapat membantu kita,mempersingkat kode
+Sama saja dengan iteratif
+recursive strategy ini bisa menjadi base case dan recurrence relations. 
+
+Number Theory 
+-> Number teori adalah cabang matematika yang mempelajari angka dimana topiknya
+mempelajari FPB,KPK,Faktorial dan BIlangan prima
+
+Searching
+-> Bertujuan untuk menemukan sebuah data dari sekumpulan data
+terdapat 2 buah yaitu linier search dan builtin search
+
+Sorting
+-> Bertujuan untuk mengurutkan data dari yang terkecil sampai yang terbesar atau sebaliknya
+macam - macam sorting yaitu selection sort, counting sort, builtin sort
+
+
+
+

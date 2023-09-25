@@ -1,0 +1,62 @@
+What is Spring Boot?
+Spring Boot make it easy to create stand-alone,
+production-grade Spring based Applications that you can "just run"
+
+We take an opinionated view of the Spring platform and third-party libralies so you can get started with minimum fuss.
+Most Spring Boot applications need minimal Spring configuration
+
+
+
+2 Type Framework: Opinionated & Non opinionated:
+
+Opinionated -> lengkap (web server, controller data access)
+Non Opinionated -> Modular (web server)
+
+
+
+Why Spring Boot?
+Benefit dan fitur dari Spring Boot antara lain:
+It provides a flexible way to configure Java Beans, XML configurations and Database Transactions
+It provides a powerful batch processing and manages REST endpoints.
+In Spring Boot, everything is auto configured
+It offers annotation-based spring application
+Easy dependency management
+It includes Embedded Servlet Container(java menggunakan apache tomcat untuk running aplikasi)
+
+
+
+Spring Boot Architecture
+Spring Boot ini menggunakan clean architecture
+Controller Access --> Presentation Layer
+
+Service Class ---> Bussiners Logic Layer --> Service Class
+
+Repository Classes ---> Data Access Layer --> Berjalan 
+
+
+
+Annotations
+@RestController for Controller class
+@RequestMapper for path naming class
+@GetMapping for Get Method
+@PostMapping for Post Method
+@PutMapping for PUT method
+@DeleteMapping for DELETE method
+@Service for Service class
+@Autowired for enabling to inject the object dependency implicity
+
+
+JPA 
+Object-Relational Mapping (ORM) is the process of converting Java object to databases tables.In other words
+The Java Persistence (JPA) is a specification that defines how to persist data in Java applications
+
+Hibarnate
+is Java ORM frameworks in use today.Hibarnate is standard implementation of the JpA specificatioan 
+
+Jadi JPA untuk melakukan query database lalu hibarnate untuk melakukan running JPA
+
+
+
+
+
+

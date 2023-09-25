@@ -1,0 +1,27 @@
+Manajemen Lahan Kuburan 
+
+Asumsikan sebagai user
+Saya membutuhakan lahan ketika dijemput oleh ajal dan terdapat lahan letaknnya
+Saya membutuhkan bunga mawar, melawati
+Saya membutuhkan bapak tukang untuk menggali kubur
+Saya membutuhkan daftar biaya pembelian lahan kubur, payung, tukang gali kubur
+
+
+
+Asumsikan sebagai pengelola
+Sebagai pengelola,saya ingin memberikan informasi daftar lahan kosong
+
+
+Lahan Kuburan adalah suatu tempat yang digunakan untuk menyemayamkan sekumpulan orang telah tiada.Orang yang hidup di daerah
+dengan padat penduduk kesulitan apabila terdapat kerabat yang meninggal karena lahan di lahan kubur di daerah tempatnya terbatas.
+Maka dari itu responden Membuat API Informasi Lahan Kubur.
+
+Dari API Lahan Kubur tersebut terdapat fitur pencarian harga 
+
+
+
+
+
+
+
+
